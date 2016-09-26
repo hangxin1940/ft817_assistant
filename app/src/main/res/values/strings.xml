@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FT817 Assistant</string>
+    <string name="scan_for_device">SCAN FOR DEVICE</string>
+    <string name="scaning_device">scanning device</string>
+    <string name="scan_completed">scan completed</string>
+    <string name="select_device">select device to connect</string>
+    <string name="device_connected">BT device connected</string>
+    <string name="device_disconnected">BT device disconnected</string>
+
+    <string name="title_activity_monitor">FT817 Assistant</string>
+</resources>

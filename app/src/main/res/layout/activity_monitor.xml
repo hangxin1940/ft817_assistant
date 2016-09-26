@@ -1,0 +1,296 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="hang.bh1sfz.ft817_assistant.MonitorActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/tv_channel"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentTop="false"
+        android:textSize="18sp"
+        android:typeface="monospace"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:id="@+id/rl_freq"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:text="000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_freq1"
+            android:textSize="60sp"
+            android:typeface="monospace"
+            android:textStyle="normal|bold"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_dot1"/>
+        <TextView
+            android:text="."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dot1"
+            android:textSize="60sp"
+            android:typeface="normal"
+            android:layout_toLeftOf="@+id/tv_freq2"
+            android:layout_centerVertical="true"
+            android:textColor="#1E1E1E" />
+
+        <TextView
+            android:text="000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_freq2"
+            android:textSize="60sp"
+            android:typeface="monospace"
+            android:textStyle="normal|bold"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dot2"
+            android:textSize="60sp"
+            android:typeface="normal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_freq2"
+            android:textColor="?attr/colorButtonNormal"
+            android:text=" " />
+        <TextView
+            android:text="00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_freq3"
+            android:textSize="60sp"
+            android:typeface="monospace"
+            android:textStyle="normal|bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_dot2" />
+
+        <TextView
+            android:text="MHz"
+            android:id="@+id/tv_mhz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:typeface="normal"
+            android:textStyle="normal|bold"
+            android:layout_centerVertical="false"
+            android:layout_toRightOf="@+id/tv_freq3"
+            android:layout_alignParentBottom="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#80b7b7b7" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_txpwr"
+            android:layout_alignParentRight="false"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:textColor="#80b7b7b7"
+            android:layout_alignLeft="@+id/tv_mhz"
+            android:layout_alignTop="@+id/tv_mhz"
+            android:layout_marginTop="-15dp" />
+
+        <TextView
+            android:text="RX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rx"
+            android:layout_alignParentRight="false"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:textColor="@color/rx_off"
+            android:layout_alignLeft="@+id/tv_txpwr"
+            android:layout_alignTop="@+id/tv_txpwr"
+            android:layout_marginTop="-15dp" />
+
+        <ImageView
+            android:src="@android:drawable/ic_lock_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgv_lockon"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_mhz"
+            android:visibility="invisible" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_freq"
+        android:layout_weight="0.07"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:text="LSB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_lsb"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/mode_disabled"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="USB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_usb"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_lsb"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="CW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_cw"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_usb"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="CWR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_cwr"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_cw"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+        <TextView
+            android:text="AM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_am"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_cwr"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+
+        <TextView
+            android:text="WFM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_wfm"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_am"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="FM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fm"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_wfm"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="DIG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_dig"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_fm"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+        <TextView
+            android:text="PKT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_pkt"
+            android:textSize="18sp"
+            android:textColor="@color/mode_disabled"
+            android:layout_toRightOf="@+id/tv_dig"
+            android:layout_marginLeft="10dp"
+            android:typeface="monospace"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"
+        android:id="@+id/rl_smeter"
+        android:layout_below="@+id/rl_freq">
+
+        <TextView
+            android:text="S"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_smeter"
+            android:layout_marginLeft="88dp"
+            android:textStyle="normal|bold"
+            android:textSize="11sp"
+            android:textColor="#80b7b7b7" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/pb_smeter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:scaleY="1.5" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/stat_sys_data_bluetooth"
+            android:id="@+id/ibtn_bt_devices"
+            android:background="@color/bt_disconnected" />
+    </RelativeLayout>
+
+</RelativeLayout>

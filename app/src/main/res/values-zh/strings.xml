@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FT817助手</string>
+    <string name="scan_for_device">搜索设备</string>
+    <string name="scan_completed">搜索完成</string>
+    <string name="scaning_device">正在搜索设备</string>
+    <string name="select_device">选择一个设备</string>
+    <string name="title_activity_monitor">FT817助手</string>
+    <string name="device_connected">设备连接成功</string>
+    <string name="device_disconnected">设备断开</string>
+</resources>

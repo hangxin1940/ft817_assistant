@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="mode_disabled">#00171e</color>
+    <color name="mode_enabled">#0096c9</color>
+    <color name="rx_on">#308c00</color>
+    <color name="rx_off">#0a1d00</color>
+    <color name="bt_disconnected">#842a25</color>
+    <color name="bt_connected">#0e1d08</color>
+</resources>
